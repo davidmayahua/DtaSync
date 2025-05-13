@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autos en Venta - El Volante</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #05c5ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-gif-container {
+      display: flex;
+      justify-content: center;
+      margin-top: -40px; /* Hacer que el GIF sobresalga */
+      z-index: 10;
+    }
+
+
+  .nav-gif {
+    width: 100%; /* Ajusta el GIF al tamaño del contenedor */
+    height: 250px; /* Mantén la altura específica */
+    object-fit: cover; /* Para que no se deforme */
+  }
+
+
+    nav {
+      background: #222;
+      padding: 1em;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+      position: relative;
+      top: -20px; /* Baja la barra para que quede debajo del GIF */
+      z-index: 1;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2em;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    .autos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1em;
+    }
+
+    .auto {
+      background: white;
+      padding: 1em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .auto:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .auto img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .ver-mas {
+      display: none;
+      position: absolute;
+      bottom: 1em;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.5em 1em;
+      background-color: #ff5722;
+      color: rgb(4, 196, 255);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .auto:hover .ver-mas {
+      display: inline-block;
+    }
+
+    #filtro {
+      margin-bottom: 1em;
+      padding: 0.5em;
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav-gif-container">
+    <img class="nav-gif" src="https://i.pinimg.com/originals/a0/07/8f/a0078f9ae8dcba99bb3c35689ade1ab2.gif" alt="GIF Auto">
+  </div>
+
+  <nav>
+    <a href="file:///E:/CONCESIONARIO/MENU.html">Inicio</a>
+    <a href="file:///E:/CONCESIONARIO/SALUD.html">Salud</a>
+    <a href="file:///E:/CONCESIONARIO/LAS%20R3.html">Tres R</a>
+  </nav>
+
+
+  <section>
+    <h2>Autos en Venta</h2>
+    <input type="text" id="filtro" placeholder="Filtrar por tipo o precio...">
+    <div class="autos" id="lista-autos">
+      <div class="auto" data-tipo="deportivo" data-precio="25000">
+        <img src="https://media.istockphoto.com/id/490887594/es/foto/2015-bugatti-visi%C3%B3n-de-gran-turismo-concepto.jpg?s=612x612&w=0&k=20&c=H53j1DEtl7hhLyOcyS6Kqc-jHOQ-wY3AnRtTNMtc6VQ=" alt="Auto Deportivo">
+        <h3>Auto Deportivo</h3>
+        <p>Precio: $25,000</p>
+        <a class="ver-mas" href="#">Ver más</a>
+      </div>
+      <div class="auto" data-tipo="suv" data-precio="30000">
+        <img src="https://acnews.blob.core.windows.net/imgnews/large/NAZ_1e4926312d8f46ff8d3895a728b9a0bd.jpg" alt="SUV Familiar">
+        <h3>SUV Familiar</h3>
+        <p>Precio: $30,000</p>
+        <a class="ver-mas" href="#">Ver más</a>
+      </div>
+      <div class="auto" data-tipo="compacto" data-precio="15000">
+        <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg" alt="Auto Compacto">
+        <h3>Auto Compacto</h3>
+        <p>Precio: $15,000</p>
+        <a class="ver-mas" href="#">Ver más</a>
+      </div>
+      <div class="auto" data-tipo="compacto" data-precio="17000">
+        <img src="https://www.autocar.co.nz/wp-content/uploads/2024/06/Bugatti-Tourbillon-2026-1600-01-750x375.jpg" alt="Auto Compacto">
+        <h3>Auto Compacto</h3>
+        <p>Precio: $17,000</p>
+        <a class="ver-mas" href="#">Ver más</a>
+      </div>
+      <div class="auto" data-tipo="compacto" data-precio="19000">
+        <img src="https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2024/05/verticalimage1717072606509-3409426.jpg" alt="Auto Compacto">
+        <h3>Auto Compacto</h3>
+        <p>Precio: $19,000</p>
+        <a class="ver-mas" href="#">Ver más</a>
+      </div>
+      <div class="auto" data-tipo="compacto" data-precio="35000">
+        <img src="https://media.gq.com.mx/photos/616310edfb5b39d60109f8d9/4:3/w_2664,h_1998,c_limit/Nuevo%20proyecto.jpg" alt="Auto Compacto">
+        <h3>Auto Compacto</h3>
+        <p>Precio: $35,000</p>
+        <a class="ver-mas" href="#">Ver más</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const filtro = document.getElementById('filtro');
+    const autos = document.querySelectorAll('.auto');
+
+    filtro.addEventListener('input', () => {
+      const valor = filtro.value.toLowerCase();
+      autos.forEach(auto => {
+        const tipo = auto.dataset.tipo;
+        const precio = auto.dataset.precio;
+        if (tipo.includes(valor) || precio.includes(valor)) {
+          auto.style.display = 'block';
+        } else {
+          auto.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" /> <!-- Codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Diseño responsivo -->
+  <title>Salud y Bienestar - El Volante</title>
+
+  <!-- Estilos internos CSS -->
+  <style>
+    /* Estilos generales del cuerpo */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #a8fda8; /* Verde claro de fondo */
+      padding: 0;
+    }
+
+    /* Estilos para la barra de navegación */
+    nav {
+      background: #222; /* Fondo oscuro */
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Contenedor principal */
+    section {
+      max-width: 1000px;
+      margin: 2em auto;
+      padding: 2em;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    p {
+      line-height: 1.6; /* Mejora la legibilidad */
+    }
+
+    /* Estilos para las listas */
+    ul {
+      list-style-type: square;
+      padding-left: 1.5em;
+    }
+
+    li {
+      margin-bottom: 1em;
+    }
+
+    /* Bloques con multimedia (imagen o video + texto) */
+    .media-block {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 2em 0;
+      gap: 2em;
+    }
+
+    /* Imágenes y videos con estilos consistentes */
+    .media-block img,
+    .media-block iframe {
+      flex: 1 1 45%;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .media-block .text {
+      flex: 1 1 45%;
+    }
+
+    iframe {
+      border: none;
+      height: 315px;
+    }
+
+    /* Adaptación responsiva para pantallas pequeñas */
+    @media (max-width: 768px) {
+      .media-block {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navegación superior con enlaces absolutos (recomendado usar relativos) -->
+  <nav>
+    <a href="file:///E:/CONCESIONARIO/MENU.html">Inicio</a>
+    <a href="file:///E:/CONCESIONARIO/SALUD.html">Salud</a>
+    <a href="file:///E:/CONCESIONARIO/LAS%20R3.html">Tres R</a>
+  </nav>
+
+  <!-- Contenido principal -->
+  <section>
+    <h2>Salud y Bienestar</h2>
+    <p>En <strong>El Volante</strong>, creemos que tu vehículo también forma parte de tu bienestar. Por eso promovemos:</p>
+
+    <!-- Lista con recomendaciones -->
+    <ul>
+      <li>El uso de autos con buena ventilación y aire limpio.</li>
+      <li>Opciones ergonómicas para evitar fatiga durante la conducción.</li>
+      <li>Modelos con tecnologías que reducen el estrés como asistencias automáticas y mayor seguridad.</li>
+      <li>Alternativas que disminuyen el uso excesivo del transporte público y mejoran tu calidad de vida.</li>
+    </ul>
+
+    <p>Cuidar tu salud también comienza con cómo te transportas. Elige inteligente, elige bienestar.</p>
+
+    <!-- Bloque con imagen y texto -->
+    <div class="media-block">
+      <img src="https://img.freepik.com/vector-premium/bienestar-cuidado-salud_24877-41350.jpg" alt="Autos saludables">
+      <div class="text">
+        <h3>Bienestar al conducir</h3>
+        <p>Un ambiente saludable en tu vehículo puede reducir dolores de cabeza, alergias y mejorar tu humor diario. La ventilación y el aire limpio son clave para una experiencia saludable.</p>
+      </div>
+    </div>
+
+    <!-- Bloque con video y texto -->
+    <div class="media-block">
+      <iframe src="https://www.youtube.com/embed/UwyKqFv6-Qc" allowfullscreen></iframe>
+      <div class="text">
+        <h3>Video: El bienestar empieza en tu auto</h3>
+        <p>Mira cómo los fabricantes están integrando salud y confort en sus nuevos modelos. Conoce las nuevas tecnologías aplicadas a tu bienestar.</p>
+      </div>
+    </div>
+
+    <!-- ⚠️ Video incompleto: deberías completar la URL del siguiente iframe -->
+    <!--
+    <div class="media-block">
+      <iframe src="https://www.youtube.com/embed/UwyK..." allowfullscreen></iframe>
+      <div class="text">
+        <h3>Video: Ergonomía en la conducción</h3>
+        <p>La postura y comodidad durante la conducción influyen directamente en tu salud física y mental.</p>
+      </div>
+    </div>
+    -->
+
+  </section>
+
+</body>
+</html>

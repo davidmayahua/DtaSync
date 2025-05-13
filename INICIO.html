@@ -1,0 +1,73 @@
+<!DOCTYPE html> <!-- Define el tipo de documento HTML5 -->
+<html lang="es"> <!-- Indica que el contenido está en español -->
+<head>
+  <meta charset="UTF-8" /> <!-- Establece la codificación de caracteres en UTF-8 (admite acentos, símbolos, etc.) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Hace que el diseño sea responsive en dispositivos móviles -->
+  <title>Inicio - Concesionario El Volante</title> <!-- Título que aparece en la pestaña del navegador -->
+
+  <style>
+    /* Estilo base para el documento */
+    body, html {
+      margin: 0; /* Elimina márgenes por defecto */
+      padding: 0; /* Elimina rellenos por defecto */
+      height: 100%; /* Ocupa el alto total del navegador */
+      font-family: Arial, sans-serif; /* Fuente del texto */
+    }
+
+    /* Fondo con imagen desenfocada */
+    .fondo {
+      background: url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d') no-repeat center center/cover; /* Imagen de fondo centrada y ajustada */
+      filter: blur(4px); /* Aplica desenfoque para dar efecto visual elegante */
+      height: 100%; /* Ocupa toda la pantalla */
+      position: fixed; /* Se mantiene fijo mientras se hace scroll */
+      width: 100%; /* Ocupa todo el ancho */
+      z-index: -1; /* Se coloca detrás del contenido principal */
+    }
+
+    /* Contenedor principal del contenido visible */
+    .contenido {
+      position: relative; /* Posición relativa para apilar sobre el fondo */
+      height: 100%; /* Ocupa toda la altura */
+      background: rgba(0, 0, 0, 0.5); /* Fondo negro translúcido para mejor legibilidad del texto */
+      color: rgb(45, 188, 245); /* Color del texto */
+      display: flex; /* Activa el modelo Flexbox */
+      flex-direction: column; /* Alinea elementos en columna */
+      justify-content: center; /* Centra verticalmente */
+      align-items: center; /* Centra horizontalmente */
+      text-align: center; /* Centra texto */
+    }
+
+    /* Estilo del botón de ingreso */
+    .btn-ingresar {
+      margin-top: 2em; /* Espacio arriba del botón */
+      padding: 1em 2em; /* Relleno interno */
+      font-size: 1.2em; /* Tamaño de letra */
+      background-color: #ff5722; /* Color de fondo naranja */
+      color: rgb(29, 191, 255); /* Color del texto */
+      border: none; /* Sin bordes */
+      border-radius: 8px; /* Bordes redondeados */
+      cursor: pointer; /* Cursor de mano al pasar el mouse */
+      text-decoration: none; /* Sin subrayado */
+      transition: background-color 0.3s ease; /* Efecto suave al cambiar el color de fondo */
+    }
+
+    .btn-ingresar:hover {
+      background-color: #e64a19; /* Color de fondo al pasar el mouse (hover) */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Imagen de fondo desenfocada -->
+  <div class="fondo"></div>
+
+  <!-- Contenido principal sobre el fondo -->
+  <div class="contenido">
+    <h1>Concesionario El Volante</h1> <!-- Título principal del sitio -->
+    <p>Tu destino para autos de calidad</p> <!-- Subtítulo o lema -->
+    
+    <!-- Botón de ingreso que lleva a otra página (MENU.html) -->
+    <a href="file:///E:/CONCESIONARIO/MENU.html" class="btn-ingresar">Ingresar</a>
+  </div>
+</body>
+</html>

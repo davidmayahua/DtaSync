@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" /> <!-- Define la codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Hace que el diseño sea responsivo -->
+  <title>Tres R - El Volante</title>
+
+  <style>
+    /* Estilos generales del cuerpo de la página */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #e0f7ea;
+      padding: 0;
+      overflow: hidden; /* Oculta las barras de desplazamiento */
+    }
+
+    /* Estilos para el menú de navegación */
+    nav {
+      background: #222;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Estilos del contenedor principal */
+    section {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 2em;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    /* Estilos para cada bloque de las "R" */
+    .r-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2em;
+      gap: 1em;
+    }
+
+    .r-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .r-text {
+      flex: 1;
+    }
+
+    strong {
+      color: #2e7d32; /* Verde oscuro para resaltar los títulos */
+    }
+
+    /* Estilo y animaciones de las hojas cayendo */
+    .hoja {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-image: url('https://toppng.com/uploads/preview/hojas-en-png-dibujo-de-hoja-verde-11562899901ryzcoa2i5h.png'); /* Imagen de la hoja */
+      background-size: cover;
+      animation: caer 6s infinite linear, rotar 5s infinite linear; /* Animaciones combinadas */
+    }
+
+    @keyframes caer {
+      0% {
+        top: -10%;
+        opacity: 1;
+        transform: translateX(0);
+      }
+      100% {
+        top: 110%;
+        opacity: 0;
+        transform: translateX(calc(100vw * 1.5)); /* Simula desplazamiento horizontal aleatorio */
+      }
+    }
+
+    @keyframes rotar {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Menú de navegación (usa rutas absolutas que deberían cambiarse por relativas) -->
+  <nav>
+    <a href="file:///E:/CONCESIONARIO/MENU.html">Inicio</a>
+    <a href="file:///E:/CONCESIONARIO/SALUD.html">Salud</a>
+    <a href="file:///E:/CONCESIONARIO/LAS%20R3.html">Tres R</a>
+  </nav>
+
+  <!-- Contenido principal: las Tres R -->
+  <section>
+    <h2>Las Tres R</h2>
+    <p>En <strong>El Volante</strong>, promovemos las prácticas responsables con el medio ambiente a través de las Tres R:</p>
+
+    <!-- Bloque: Reducir -->
+    <div class="r-item">
+      <img class="r-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNzZ2DmdvCsRGroJHCBHERyMBON8gYeGApT8KKumMx1IAY9XWQA5dm4wJ4K-KqGxWh4Ns&usqp=CAU" alt="Reducir">
+      <div class="r-text">
+        <p><strong>Reducir:</strong> Elegimos autos con menor consumo de combustible y emisiones reducidas.</p>
+      </div>
+    </div>
+
+    <!-- Bloque: Reutilizar -->
+    <div class="r-item">
+      <img class="r-img" src="https://bcdn.products.pcc.eu/wp-content/uploads/2021/03/3R-2.jpg" alt="Reutilizar">
+      <div class="r-text">
+        <p><strong>Reutilizar:</strong> Vendemos vehículos seminuevos en excelente estado para extender su vida útil.</p>
+      </div>
+    </div>
+
+    <!-- Bloque: Reciclar -->
+    <div class="r-item">
+      <img class="r-img" src="https://cdn0.uncomo.com/es/posts/1/7/9/cual_es_el_significado_de_las_tres_r_26971_600.jpg" alt="Reciclar">
+      <div class="r-text">
+        <p><strong>Reciclar:</strong> Apoyamos talleres que reutilizan y reciclan piezas automotrices.</p>
+      </div>
+    </div>
+
+    <p>Creemos que cada acción cuenta para cuidar nuestro planeta mientras ofrecemos movilidad de calidad.</p>
+  </section>
+
+  <!-- Script para generar hojas animadas -->
+  <script>
+    // Función para crear múltiples hojas animadas
+    function crearHojas() {
+      const cantidad = 15; // Número de hojas
+      for (let i = 0; i < cantidad; i++) {
+        let hoja = document.createElement('div'); // Crear elemento
+        hoja.classList.add('hoja'); // Añadir clase
+        hoja.style.left = Math.random() * 100 + 'vw'; // Posición horizontal aleatoria
+        hoja.style.animationDuration = (Math.random() * 4 + 4) + 's'; // Duración aleatoria
+        hoja.style.animationDelay = Math.random() * 4 + 's'; // Retraso aleatorio
+        document.body.appendChild(hoja); // Añadir al body
+      }
+    }
+
+    // Ejecutar cuando la página se haya cargado
+    window.onload = crearHojas;
+  </script>
+
+</body>
+</html>
